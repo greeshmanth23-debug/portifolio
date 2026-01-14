@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="portifolio_style.css">
+   
+
+    <script>
+        let isopen=false;
+        function toggleMenu(){
+            const navbar=document.querySelector('.navbar');
+            const menu=document.querySelector('.menu');
+            const toggle=document.querySelector('.toggle');
+            if(!isopen){
+                navbar.style.display='block';
+                menu.style.display='flex';
+                menu.style.flexDirection='column';
+                isopen=true;
+            }
+            else{
+                navbar.style.display='flex';
+                if(window.innerWidth <= 768){
+                    menu.style.display='none';
+                }
+                isopen=false;
+            }
+                
+
+        }
+        
+
+    </script>
+</head>
+<body>
+    <section class="navigation">
+        <div class="container navbar">
+            <div class="title">
+                <h1>My Portfolio</h1>
+            </div>
+            <div class="menu">
+                <a href="#aboutme" class="link">About me</a>
+                <a href="#projects" class="link">Projects</a>
+                <a href="#Experience" class="link">Experience</a>
+                <a href="#skills" class="link">Skills</a>
+            </div>
+            <button class="toggle" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </button>
+        </div>
+    </section>
+    <section class="hero">
+        <div class="body">
+            <div class="hero-content">
+                <h1 class="hero-title" style="color:#F4ECE2">Greeshmanth Sai Venkatesh</h1>
+                <h3 style="color:#E6D7CC">Aspiring Software & Frontend Developer | Founder-SmartRetail AI</h3>
+                <div class="social">
+                    <a href="https://github.com/greeshmanth23-debug" target="_blank" class="link"><img src="./images/GitHub-logo.jpg" height="30px" width="30px"></a>
+                    <a href="https://www.linkedin.com/in/ravuri-greeshmanth-66a6b7327/" target="_blank" class="link"><img src="./images/linkedin.png" height="30px" width="30px"></a>
+                    <a href="mailto:greeshmanth23@gmail.com" class="link" target="_blank"><img src="./images/mail.jpg" height="30px" width="30px"></a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img class="hero-img" src="./images/profile.jpg" alt="Hero Image">
+            </div>
+        </div>
+    </section>
+    <section class="about-me" id="aboutme">
+        <div class="about">
+            <div class="about-title">
+                <h2 style="color:#452829;">ABOUT ME</h2>
+            </div>
+            <div class="about-body">
+                <p>I am an engineering student and aspiring software developer with a strong passion for building clean, user-focused web applications. I enjoy turning real-world problems into practical digital solutions using modern frontend technologies and AI-assisted development.</p>
+            </div>
+            <div class="flexdiv">
+                <div class="flexdiv1">
+                    <h3>DESIGN</h3>
+                    <div class="flexdiv1-body">
+                        <p>I design clean, modern, and intuitive user interfaces focused on usability, clarity, and visual balance. My goal is to create experiences that feel simple, professional, and user-friendly.</p>
+                    </div>
+                </div>
+                <div class="flexdiv2">
+                    <h3>DEVELOPMENT</h3>
+                    <div class="flexdiv2-body">
+                        <p>I develop responsive and scalable web applications using HTML, CSS, JavaScript, and modern development practices, ensuring performance and maintainability.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-tail">
+                <h3>MAINTENANCE</h3>
+                <div class="tail-body">
+                    <p>
+                        I continuously improve, optimize, and maintain applications to ensure reliability, smooth performance, and long-term usability.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="skills" id="skills">
+        <div class="skill">
+            <div class="skill-head">
+                <h2>SKILLS</h2>
+            </div>
+            <div class="skill-body">
+                <div class="row1">
+                    <div class="col-3">
+                        <img src="./images/C++logo.png" height="80px" width="50px">
+                        <h3>C++</h3>
+                    </div>
+                    <div class="col-3">    
+                        <img src="./images/pythonlogo.jpeg" height="80px" width="50px">
+                        <h3>Python</h3>
+                    </div>
+                    <div class="col-3">
+                        <img src="./images/javalogo.png" height="80px" width="50px">
+                        <h3>Java</h3>
+                    </div>
+                    <div class="col-3">
+                        <img src="./images/sqllogo.jpg" height="80px" width="50px">
+                        <h3>Sql</h3>
+                    </div>
+                </div>
+                <div class="row1">
+                    <div class="col-3">
+                        <img src="./images/htmllogo.png" height="80px" width="50px">
+                        <h3>HTML</h3>
+                    </div>
+                    <div class="col-3">    
+                        <img src="./images/csslogo.png" height="80px" width="50px">
+                        <h3>CSS</h3>
+                    </div>
+                    <div class="col-3">
+                        <img src="./images/jslogo.jpg" height="80px" width="50px">
+                        <h3>JavaScript</h3>
+                    </div>
+                    <div class="col-3">
+                        <img src="./images/blogo.png" height="80px" width="50px">
+                        <h3>Bootstrap</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    <section class="projects" id="projects">
+        <div class="project">
+            <div class="project-head">
+                <h2>PROJECTS</h2>
+            </div>
+            <div class="project-title">
+                <h3>SmartRetail-AI</h3>
+            </div>
+            <div class="project-body">
+                <div class="project-content">
+                    <div class="project-contentin">
+                        <h4>Discription</h4>
+                        <p><span class="body-span">SmartRetail AI is an AI-powered retail management web application</span> built to help small offline shops digitize billing, inventory, and daily operations. The platform simplifies manual workflows by enabling faster billing, real-time stock tracking, and AI-driven business insights. It also includes voice-based billing to improve speed and usability for non-technical shop owners.</p>
+                    </div>
+                    <div class="project-contentin">
+                        <h4>My Contribution</h4>
+                        <p>I led the product from idea to deployment, handling product planning and frontend development. I designed the user interface, implemented voice-based billing using speech-to-text APIs, integrated AI-powered suggestions, and deployed the application using Firebase with real-time data handling. I also gathered feedback from retailers and iterated the product to improve usability and efficiency.</p>
+                    </div>
+                </div>
+                <div class="project-demo">
+                    <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7362710762600964096?collapsed=1" height="400" width="400" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+                </div>
+            </div>
+            <div class="project-footer">
+                <a class="link" href="https://smartretail-ai-app.web.app/" target="_blank">Try Now</a>
+            </div>
+
+        </div> 
+    </section>
+    <section class="experiences" id="experience">
+        <div class="experience">
+            <div class="experience-head">
+                <h2>EXPERIENCE</h2>
+            </div>
+            <div class="experience-body">
+                <div class="experience-left">
+                    <h3>Founder & Product Lead</h3>
+                    <h4>SmartRetail AI</h4>
+                    <p>
+                        <span class="body-span">SmartRetail AI is an AI-powered retail management platform</span> developed to digitize billing, inventory, and daily operations for small offline retailers. I led the product from ideation to deployment, focusing on usability, scalability, and AI-driven insights.
+                    </p>
+                    <p>
+                        I designed and implemented the frontend, integrated voice-based billing using speech-to-text APIs, added AI-powered business suggestions, and deployed the application using Firebase with real-time data handling. I also collected feedback from retailers and iterated the product to improve efficiency and adoption.
+                    </p>
+                </div>
+                <div class="experience-right">
+                    <div class="experience-edu">
+                        <h3>Bachelor of Technology (B.Tech)</h3>
+                        <h4>Aditya University</h4>
+                        <p>
+                            <span class="body-span">Engineering undergraduate</span> with strong foundations in software development, problem solving, and applied computer science, actively applying academic knowledge to real-world projects.
+                        </p>
+                    </div>
+                    <div class="experience-edu">
+                        <h3>Minor in Artificial Intelligence</h3>
+                        <h4>IIT Ropar</h4>
+                        <p>
+                            <span class="body-span">Specialized academic training in Artificial Intelligence</span> covering core AI concepts, applied machine learning fundamentals, and real-world AI system integration.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <p>
+            <span class="body-span">Ravuri Greeshmanth Sai Venkatesh</span> — Aspiring Software / Frontend Developer
+        </p>
+        <p>Callto:+919052164495</p>
+        <p>Rajahmundry, Andhra Pradesh, India</p>
+        <p>© 2026 All rights reserved</p>
+    </footer>
+
+
+
+</body>
+</html>
